@@ -31,12 +31,12 @@ use yii\web\Controller;
  */
 class Generator extends \yii\gii\Generator
 {
-    public $modelClass;
-    public $controllerClass;
-    public $viewPath;
+    public $modelClass = 'app\models\Post';
+    public $controllerClass = 'app\controllers\PostController';
+    public $viewPath = '@app/views/post';
     public $baseControllerClass = 'yii\web\Controller';
     public $indexWidgetType = 'grid';
-    public $searchModelClass = '';
+    public $searchModelClass = 'app\models\PostSearch';
     public $name = '';
     public $elementName = '';
     public $elementNameAttribute = '';
