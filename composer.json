@@ -1,0 +1,25 @@
+{
+  "name": "xmlex/generator",
+  "description": "Yii2 crud generator template for AdminLTE",
+  "keywords": [
+    "yii2",
+    "generator",
+    "crud",
+    "adminlte"
+  ],
+  "homepage": "https://github.com/xMlex/yii2-adminlte-generator",
+  "type": "extension",
+  "license": "LGPL-3.0",
+  "minimum-stability": "dev",
+  "require": {
+    "php": ">=5.4.0",
+    "yiisoft/yii2": "~2.0.8"
+  },
+  "require-dev": {
+    "yiisoft/yii2-gii": "*"
+  },
+  "config": {
+    "process-timeout": 1800,
+    "preferred-install": "dist"
+  }
+}
