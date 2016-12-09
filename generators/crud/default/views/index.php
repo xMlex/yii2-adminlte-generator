@@ -23,6 +23,9 @@ use <?= $generator->indexWidgetType === 'grid' ? "yii\\grid\\GridView" : "yii\\w
 $this->title = <?= $generator->generateString($generator->name) ?>;
 $this->params['breadcrumbs'][] = $this->title;
 ?>
+<?php if(!empty($generator->searchModelClass)): ?>
+    <?= "<?php " . ($generator->indexWidgetType === 'grid' ? "// " : "") ?>echo $this->render('_search', ['model' => $searchModel]); ?>
+<?php endif; ?>
 <div class="row <?= Inflector::camel2id(StringHelper::basename($generator->modelClass)) ?>-index">
     <div class="col-md-12">
         <div class="box">
@@ -35,10 +38,6 @@ $this->params['breadcrumbs'][] = $this->title;
                 </div>
             </div>
             <div class="box-body">
-<?php if(!empty($generator->searchModelClass)): ?>
-<?= "                <?php " . ($generator->indexWidgetType === 'grid' ? "// " : "") ?>echo $this->render('_search', ['model' => $searchModel]); ?>
-<?php endif; ?>
-
 <?= $generator->enablePjax ? '<?php Pjax::begin(); ?>' : '' ?>
 <?php if ($generator->indexWidgetType === 'grid'): ?>
                 <?= "<?= " ?>GridView::widget([
