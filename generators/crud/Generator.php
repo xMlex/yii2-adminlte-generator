@@ -5,7 +5,7 @@
  * @license http://www.yiiframework.com/license/
  */
 
-namespace xmlex\generators\crud;
+namespace xmlex\adminlte\generators\crud;
 
 use Yii;
 use yii\db\ActiveRecord;
