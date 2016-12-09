@@ -14,9 +14,9 @@ $config['modules']['gii'] = [
         ...
         'generators' => [
             'crud' => [
-                'class' => 'xmlex\generators\crud\Generator',
+                'class' => 'xmlex\adminlte\generators\crud\Generator',
                 'templates' => [
-                    'LTEAdmin' => '@vendor/xmlex/generators/crud/default',
+                    'LTEAdmin' => '@vendor/xmlex/generator/generators/crud/default',
                 ]
             ]
         ],
